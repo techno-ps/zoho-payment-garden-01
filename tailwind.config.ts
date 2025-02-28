@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				zoho: {
+					'light-gray': '#f5f5f7',
+					'medium-gray': '#e0e0e5',
+					'dark-gray': '#86868b',
+					'text': '#1d1d1f',
+					'accent': '#1d1d1f',
+					'primary': '#0066CC',
+					'secondary': '#f5f5f7',
+					'success': '#00c16e'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'card-hover': {
+					'0%': {
+						transform: 'translateY(0)',
+						boxShadow: '0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1)'
+					},
+					'100%': {
+						transform: 'translateY(-5px)',
+						boxShadow: '0 10px 25px rgba(0,0,0,0.07), 0 6px 6px rgba(0,0,0,0.05)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'card-hover': 'card-hover 0.3s ease-in-out forwards'
 			}
 		}
 	},
